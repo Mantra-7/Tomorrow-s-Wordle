@@ -4,6 +4,9 @@ function myFunction()
 
     var ms = Date.now();
     var day = Math.floor(ms/(1000*60*60*24))
+    
+    // Currently works according to UTC timezone, if you want to make it work according to yours then
+    // var day = Math.floor((ms/(1000*60*60)+offset)/24)  // where offset is offset of your timezone from UTC in hours, 5.5 for india.
 
     var wordle_tm = words[(day-19132+336)%words.length].toUpperCase()
 
